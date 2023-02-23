@@ -43,7 +43,7 @@
                     <b-container v-else-if="size <= requiredSize">
                       <b-row class="text-center txt-md py-5">
                         <b-col cols="12">
-                          You have to hold at least {{ fromWei(requiredSize,6) }} MouseWorm to mint
+                          You have to hold at least {{ fromWei(requiredSize,6) }} MouseWorm to mint {{ size }}
                         </b-col>
                       </b-row>
                     </b-container>
@@ -74,7 +74,7 @@
                   <b-col cols="12" lg="5" class="txt-lg six-hands-brush mt-5 pt-lg-5 ps-lg-5">
                     <b-row>
                       <b-col cols="6" class="dk-blue">Minted:</b-col>
-                      <b-col cols="6" class="white">{{ sizeNFT }} / 10</b-col>
+                      <b-col cols="6" class="white">{{ sizeNFT }} / {{ maxNFTAmount }}</b-col>
                     </b-row>
                     <b-row>
                       <b-col cols="6" class="dk-blue">Total Minted:</b-col>

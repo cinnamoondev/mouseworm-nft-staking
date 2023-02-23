@@ -1,6 +1,6 @@
 export default {
-    address: "0xfD6665E927EB5824cf10b6FB5AA49F5193314460",
-    tokenUri: "https://dt.cinnamoon.cc:8080/",
+    address: "0x497609D97A56Ee9Ec2942449ddae8Eaf9A3e1Ba7",
+    tokenUri: "https://164.92.242.36:8090/",
     abi: [
         {
             "inputs": [],
