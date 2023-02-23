@@ -1,0 +1,438 @@
+/* Path: css/home.css 
+Author: 2023 blueflymedia.com */
+
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+body {
+  font-family: "ccsignlanguage", sans-serif;
+}
+
+body {
+  font-family: "ccsignlanguage", sans-serif;
+}
+
+a,
+.nav-link {
+  font-size: 24px;
+}
+
+a:hover {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+
+  a,
+  .nav-link {
+    font-size: 32px;
+  }
+}
+
+/*===================== font families ======================*/
+/* .canvas-script-1 {
+  font-family: "canvas-script", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.p22-freely {
+  font-family: "p22-freely", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ltc-swing-bold {
+  font-family: "ltc-swing", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.six-hands-marker {
+  font-family: "six-hands-marker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.six-hands-brush {
+  font-family: "six-hands-brush", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.six-hands-rough {
+  font-family: "six-hands-rough", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.six-hands-black {
+  font-family: "six-hands-black", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.monster-mash {
+  font-family: "ccmonstermash", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monster-mash-worn {
+  font-family: "ccmonstermashworn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*===================== /end font families ======================*/
+
+/*===================== font sizes ======================*/
+
+.txt-md {
+  font-size: 24px;
+}
+
+.txt-lg {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .txt-md {
+    font-size: 28px;
+  }
+
+  .txt-lg {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .txt-md {
+    font-size: 32px;
+  }
+
+  .txt-lg {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .txt-md {
+    font-size: 36px;
+  }
+
+  .txt-lg {
+    font-size: 46px;
+  }
+}
+
+/*===================== /end font sizes ======================*/
+
+.text-right {
+  text-align: right;
+}
+
+/*===================== colors ======================*/
+
+.color-1 {
+  color: #C23068;
+}
+
+.dk-blue {
+  color: #2D0B34;
+}
+
+.dk-blue2 {
+  color: #1B2845;
+}
+
+.white {
+  color: #fff;
+}
+
+/*===================== /end colors ======================*/
+
+.bodyBG {
+  background: linear-gradient(180deg, #B93B9B 0%, #C23068 50%, #FF86AB 100%);
+}
+
+
+.btn-1 {
+  box-sizing: border-box;
+  background: linear-gradient(323.98deg, #7F0799 11.1%, #C93DB6 66.32%);
+  border: 5px solid #AB2E9A;
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+}
+
+.headline-astounder {
+  font-family: astounder-squared-bb, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.mainBG {
+  background: hsla(335, 99%, 65%, 1);
+  background: linear-gradient(90deg, hsla(335, 99%, 65%, 1) 0%, hsla(335, 100%, 84%, 1) 59%);
+  background: -moz-linear-gradient(90deg, hsla(335, 99%, 65%, 1) 0%, hsla(335, 100%, 84%, 1) 59%);
+  background: -webkit-linear-gradient(90deg, hsla(335, 99%, 65%, 1) 0%, hsla(335, 100%, 84%, 1) 59%);
+  //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FE4E96", endColorstr="#FFACCE", GradientType=1);
+  border-radius: 10px;
+  border: 1px solid #EE5B88;
+}
+
+/*===================== /end colors ======================*/
+
+/*===================== inputs & buttons ======================*/
+form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn-mint {
+  font-size: 40px;
+  height: 60px;
+  line-height: 0;
+  padding: 8px 30px;
+}
+
+
+.b-form-spinbutton {
+  border: 3px solid #AB2E9A !important;
+  height: 60px !important;
+  border-radius: 10px !important;
+  font-size: 50px;
+
+   output > bdi {
+     min-width: 1rem;
+   }
+  button {
+    width: 25%;
+  }
+
+  output {
+    border: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .b-form-spinbutton {
+    border: 5px solid #AB2E9A !important;
+    height: 80px !important;
+  }
+
+  .btn-mint {
+    font-size: 50px;
+    height: 80px;
+    line-height: 1;
+    padding: 8px 30px;
+  }
+}
+
+.mint-amount {
+  display: inherit;
+  justify-content: start;
+}
+
+
+.b-form-spinbutton button:hover {
+  cursor: pointer;
+}
+
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*===================== /end inputs & buttons ======================*/
+
+.mouseBG {
+  background-image: url('/images/mouse-content-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  /* position: absolute; */
+}
+
+.btn,
+.nav-pills {
+  background: linear-gradient(323.98deg, #7F0799 11.1%, #C93DB6 66.32%);
+  border: 5px solid #AB2E9A;
+  border-radius: 10px;
+  font-family: "ccsignlanguage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+
+.nav-link {
+  color: #2D0B34;
+}
+
+.btn:hover,
+.nav-pills .nav-link:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #7F0799;
+  color: #fff;
+}
+
+.nav-link:focus {
+  color: #1B2845;
+}
+
+.nav-link:hover {
+  color: hsla(335, 100%, 84%, 1)
+}
+
+.btn-connect,
+.btn-mint {
+  background: linear-gradient(323.98deg, #7F0799 11.1%, #C93DB6 66.32%);
+  border: 5px solid #AB2E9A;
+  border-radius: 10px;
+  font-family: "ccsignlanguage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+.btn-mint:focus, .btn-mint:hover, .btn-connect:focus, .btn-connect:hover {
+  border-color: #AB2E9A;
+  box-shadow: none;
+}
+
+
+.btn-connect {
+  font-size: 30px;
+  padding: 8px 20px;
+}
+
+.logoBG {
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .logoBG {
+    margin-top: -61px;
+    margin-left: -77px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoBG {
+    margin-top: -87px;
+    margin-left: -83px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoBG {
+    margin-top: -77px;
+    margin-left: -122px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logoBG {
+    margin-top: -126px;
+    margin-left: -125px;
+  }
+}
+
+.logoBG img {
+  width: 80%;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .logoBG img {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+.logo-title img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .logo-title img {
+    width: 100%;
+    padding-right: 25px;
+  }
+}
+
+.wormie {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .wormie {
+    display: block;
+    position: absolute;
+    top: 419px;
+    z-index: -999;
+    transform: rotate(343deg);
+    left: 260px;
+  }
+}
+
+.wormie img {
+  width: 100px;
+  padding: 0;
+}
+
+.mint {
+  border: 5px solid #AB2E9A;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .mint {
+    background: none;
+    border: none;
+  }
+}
+
+.mint bdi {
+  color: #C23068;
+}
+
+header {
+  padding-bottom: 30px;
+}
+
+.logo-title {
+  z-index: 1;
+}
+
+.d-relative {
+  position: relative;
+}

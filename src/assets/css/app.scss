@@ -1,0 +1,118 @@
+$theme-colors: (
+        "primary": #E833DA,
+        "secondary": #000000,
+        "white": #ffffff,
+        "gray": #515151,
+        "transparent": transparent
+);
+
+$body-color: #fff;
+$body-bg: #E833DA;
+$link-color: #ffffff;
+$font-family-base: 'ccsignlanguage', sans-serif;
+
+//navbar
+$navbar-light-color: #ffffff;
+$navbar-light-active-color: rgba(255, 255, 255, 0.7);
+$navbar-light-hover-color: rgba(255, 255, 255, 0.7);
+$nav-tabs-link-active-bg: transparent;
+
+$card-bg: transparent;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+p, ul li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.nav-link {
+  font-family: 'ccsignlanguage', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ccsignlanguage', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600 !important;
+}
+
+h1 {
+  font-size: 56px !important;
+}
+
+h2 {
+  font-size: 40px !important;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px !important;
+}
+
+h5 {
+  font-size: 16px !important;
+}
+
+/**
+Buttons
+ */
+
+.border-radius-10 {
+  border-radius: 20px;
+}
+
+.border-right {
+  border-width: 3px !important;
+}
+
+
+.b-form-spinbutton .border-left {
+  border-left: none !important;
+}
+.b-form-spinbutton .border-right {
+  border-right: none !important;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 5px solid #4d4d4d;
+  color: #4d4d4d;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 5px solid #E833DA;
+  color: #ffffff;
+}
+
+.btn, button {
+  padding: 0.45rem 0.75rem !important;
+  font-size: 12px !important;
+}
+
+.spinner {
+  margin: -.75rem !important;
+}
+
+@media (max-width: 480px) {
+  * {
+    text-align: center;
+  }
+
+  .border-radius-10 {
+    border-radius: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mt-md-10, .my-md-10 {
+    margin-top: 100px !important;
+  }
+}
