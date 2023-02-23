@@ -1,4 +1,3 @@
 module.exports = {
-    productionSourceMap: false,
-    publicPath: '/mouseworm/'
+    productionSourceMap: false
 }
