@@ -1,5 +1,6 @@
 export default {
     address: "0x497609D97A56Ee9Ec2942449ddae8Eaf9A3e1Ba7",
+    //address: "0xE062c3D8cA18f6d2Cf0A79a3600c985dC973dc3d",
     tokenUri: "https://164.92.242.36:8090/",
     abi: [
         {

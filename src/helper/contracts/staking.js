@@ -1,5 +1,5 @@
 export default {
-    address: "0x8A046576Eda20dB8A0BF27261C1bdfA2B839EA05",
+    address: "0xB1A7f8CB8Ef3A8dF2554Ca2D5F8f2Be9bC43da18",
     abi: [
         {
             "inputs": [
@@ -76,7 +76,7 @@ export default {
                     "type": "uint256"
                 }
             ],
-            "name": "claimRewards",
+            "name": "claimETH",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -110,6 +110,19 @@ export default {
             "type": "function"
         },
         {
+            "inputs": [
+                {
+                    "internalType": "bool",
+                    "name": "_isEmergency",
+                    "type": "bool"
+                }
+            ],
+            "name": "emergency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
             "inputs": [],
             "name": "massUpdatePools",
             "outputs": [],
@@ -117,60 +130,10 @@ export default {
             "type": "function"
         },
         {
-            "inputs": [],
-            "name": "renounceOwnership",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
             "inputs": [
                 {
-                    "internalType": "uint256",
-                    "name": "_pid",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint64",
-                    "name": "_allocPoint",
-                    "type": "uint64"
-                },
-                {
-                    "internalType": "bool",
-                    "name": "_withUpdate",
-                    "type": "bool"
-                }
-            ],
-            "name": "set",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "startRewards",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "_address",
-                    "type": "address"
-                }
-            ],
-            "name": "unauthorize",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "contract IMW",
-                    "name": "_mw",
+                    "internalType": "contract IERC20",
+                    "name": "_mouseworm",
                     "type": "address"
                 },
                 {
@@ -181,6 +144,81 @@ export default {
             ],
             "stateMutability": "nonpayable",
             "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "pid",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "lockTime",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Deposit",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "timestamp",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "bool",
+                    "name": "ifEmergency",
+                    "type": "bool"
+                }
+            ],
+            "name": "Emergency",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "pid",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "EmergencyWithdraw",
+            "type": "event"
         },
         {
             "anonymous": false,
@@ -286,6 +324,13 @@ export default {
             "type": "event"
         },
         {
+            "inputs": [],
+            "name": "renounceOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
             "inputs": [
                 {
                     "internalType": "address",
@@ -294,6 +339,29 @@ export default {
                 }
             ],
             "name": "rescueToken",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_pid",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint64",
+                    "name": "_allocPoint",
+                    "type": "uint64"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_withUpdate",
+                    "type": "bool"
+                }
+            ],
+            "name": "set",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -315,11 +383,18 @@ export default {
             "inputs": [
                 {
                     "internalType": "address",
-                    "name": "_router",
+                    "name": "_TaxDistributor",
                     "type": "address"
                 }
             ],
-            "name": "setRouter",
+            "name": "setTaxDistributor",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "startRewards",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -363,8 +438,36 @@ export default {
             "type": "function"
         },
         {
-            "stateMutability": "payable",
-            "type": "fallback"
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                }
+            ],
+            "name": "unauthorize",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "cimoRWTokenPerBlock",
+                    "type": "uint256"
+                }
+            ],
+            "name": "UpdateEmissionRate",
+            "type": "event"
         },
         {
             "inputs": [
@@ -396,6 +499,35 @@ export default {
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "pid",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Withdraw",
+            "type": "event"
+        },
+        {
+            "stateMutability": "payable",
+            "type": "fallback"
         },
         {
             "inputs": [
@@ -536,6 +668,19 @@ export default {
             "type": "function"
         },
         {
+            "inputs": [],
+            "name": "isEmergency",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
             "inputs": [
                 {
                     "internalType": "address",
@@ -556,10 +701,10 @@ export default {
         },
         {
             "inputs": [],
-            "name": "MW",
+            "name": "MouseWorm",
             "outputs": [
                 {
-                    "internalType": "contract IMW",
+                    "internalType": "contract IERC20",
                     "name": "",
                     "type": "address"
                 }
@@ -729,6 +874,19 @@ export default {
         },
         {
             "inputs": [],
+            "name": "TaxDistributor",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
             "name": "totalAllocPoint",
             "outputs": [
                 {
@@ -761,13 +919,13 @@ export default {
                     "type": "uint112"
                 },
                 {
-                    "internalType": "uint16",
-                    "name": "lockTimeBoost",
-                    "type": "uint16"
+                    "internalType": "uint32",
+                    "name": "lockedUntil",
+                    "type": "uint32"
                 },
                 {
                     "internalType": "uint32",
-                    "name": "lockedUntil",
+                    "name": "lockTimeBoost",
                     "type": "uint32"
                 },
                 {
@@ -776,14 +934,14 @@ export default {
                     "type": "uint96"
                 },
                 {
-                    "internalType": "uint256",
-                    "name": "withdrawn",
-                    "type": "uint256"
-                },
-                {
                     "internalType": "uint112",
                     "name": "weightedBalance",
                     "type": "uint112"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "withdrawn",
+                    "type": "uint256"
                 },
                 {
                     "internalType": "uint112",

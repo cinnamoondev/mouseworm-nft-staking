@@ -1,7 +1,6 @@
 /* Path: css/home.css 
 Author: 2023 blueflymedia.com */
 
-
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
@@ -415,10 +414,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 600px) {
-  .mint {
-    background: none;
-    border: none;
-  }
+  //.mint {
+  //  background: none;
+  //  border: none;
+  //}
 }
 
 .mint bdi {
