@@ -97,7 +97,7 @@
                           <b-row class="mt-3 mt-md-0">
                             <b-col cols="4" class="mt-3" v-for="(item) in availableNFTs" :key="item">
                               <figure>
-                                <b-img :src="`//wsrv.nl/?url=http://164.92.242.36:8090/media/${parseInt(item) + 1}`" fluid
+                                <b-img :src="`http://164.92.242.36:8090/media/${parseInt(item)}`" fluid
                                        :class="selectedNFT == item ? 'selected' : ''"
                                        @click="selectNFT(item)"></b-img>
 
@@ -169,7 +169,7 @@
                           <b-row>
                             <b-col cols="4" v-for="(item) in stakedNFTs" :key="item">
                               <figure>
-                                <b-img :src="`//wsrv.nl/?url=http://164.92.242.36:8090/media/${parseInt(item) + 1}`" fluid
+                                <b-img :src="`http://164.92.242.36:8090/media/${parseInt(item)}`" fluid
                                        :class="selectedNFT == item ? 'selected' : ''"
                                        @click="selectNFT(item)"></b-img>
                                 <figcaption class="text-center">NFT #{{ parseInt(item) + 1 }}</figcaption>
@@ -312,7 +312,7 @@ export default {
   components: {VueLoadingButton, VueCountdown},
   data: function () {
     return {
-      DAY: 60,
+      DAY: 86400,
       isObservationEnabled: false,
       user: null,
       nftContract: null,
