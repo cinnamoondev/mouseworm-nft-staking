@@ -718,7 +718,7 @@ export default {
       if (accounts.length === 0) {
         this.connect();
       } else if (accounts[0] !== this.user) {
-        this.user = "0xb94313cbdf2891ce2dd3b9e1fba6798b6e138060"//accounts[0];
+        this.user = accounts[0];
       }
     },
     connect() {
