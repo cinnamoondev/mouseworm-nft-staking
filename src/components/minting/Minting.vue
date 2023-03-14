@@ -386,10 +386,10 @@ export default {
     beautifyWallet: function (address) {
       return address.slice(0, 6) + '...' + address.slice(-6)
     },
-    format: function (number) {
+    format: function (number, decimals = 0) {
       return new Intl.NumberFormat('en-US', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
       }).format(number)
     },
     start: async function () {
@@ -497,7 +497,7 @@ export default {
 
       if (this.availableNFTs.includes(this.selectedNFT)) {
         this.nftStakeLoading = true
-
+        console.log(0, NFT.address, parseInt(this.selectedNFT), this.lockDuration * this.DAY)
         return this.stakingContract.methods.depositNFT(0, NFT.address, parseInt(this.selectedNFT), this.lockDuration * this.DAY)
             .send({from: this.user, value: 0})
             .on("receipt", function () {
@@ -718,7 +718,7 @@ export default {
       if (accounts.length === 0) {
         this.connect();
       } else if (accounts[0] !== this.user) {
-        this.user = accounts[0];
+        this.user = "0xb94313cbdf2891ce2dd3b9e1fba6798b6e138060"//accounts[0];
       }
     },
     connect() {
