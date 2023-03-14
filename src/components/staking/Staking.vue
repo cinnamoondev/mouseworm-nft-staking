@@ -701,6 +701,4 @@ input:checked:not(:disabled) + .btn {
   background-color: rgb(232, 51, 218);
   color: #fff !important;
 }
-
-
 </style>
